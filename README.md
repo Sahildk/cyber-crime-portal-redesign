@@ -1,0 +1,67 @@
+# ✦ SafeNet India
+> **A simpler, citizen-first redesign for the National Cyber Crime Reporting Portal.**
+
+[![Next.js](https://img.shields.io/badge/Next.js-15.1-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-blue?style=flat-square&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-black?style=flat-square&logo=framer)](https://www.framer.com/motion/)
+[![License](https://img.shields.io/badge/License-MIT-brightgreen?style=flat-square)]()
+
+---
+
+## 🎯 The Core Idea
+
+> **Citizens in distress should not have to understand 20+ legal cybercrime categories before they can explain what happened.**
+
+SafeNet India reimagines citizen intake for cybercrime reporting by flipping the legacy paradigm:
+
+- **Legacy Model**: *Category-First* ➔ Confusing dropdowns with overlapping legal classifications (Sec 66D, unauthorized debit, vishing) leading to high friction and abandonment.
+- **SafeNet Model**: *Experience-First* ➔ Citizens describe what happened in everyday plain language; on-device assistive triage organizes the right evidence and routes the report automatically.
+
+---
+
+## ✨ Key Features
+
+- **🗣️ Natural-Language Triage Engine**: Intelligent, on-device intent classifier that scores signals across *Financial Fraud*, *Account Takeover*, and *Online Harassment*.
+- **⚡ Seamless Handoff & Auto-Advance**: Never asks the same question twice. Story inputs from triage carry over directly into tailored detail collection forms.
+- **🛡️ 3 Multi-Category Reporting Journeys**:
+  - **💸 Payment & Banking Fraud**: UPI, unauthorized debits, transaction UTR tracking, debit SMS evidence, and immediate **1930 / Bank Freezing** guidance.
+  - **🔐 Account & Identity Takeover**: Compromised Instagram, WhatsApp, or Gmail logins, altered recovery credentials, and formal takeover recovery drafts.
+  - **🛡️ Online Harassment & Impersonation**: Fake profiles, abusive DMs, timestamped uncropped evidence, and platform Grievance Officer takedown drafts.
+- **🚨 High-Contrast Emergency Guidance**: Instant, 1-tap dialer for the national **1930** cyber fraud helpline.
+- **🌐 Bilingual by Design**: Full English & हिंदी toggle across all journeys.
+- **🔒 100% Client-Side & Private**: All classification and complaint drafting run strictly locally on the citizen's device.
+
+---
+
+## 🚀 Quick Start
+
+### 1. Clone & Install
+```bash
+git clone https://github.com/<your-username>/cyber-crime-portal-redesign.git
+cd cyber-crime-portal-redesign
+npm install
+```
+
+### 2. Run Locally
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) (or `http://localhost:3001`) in your browser.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Vanilla CSS (Custom dark cyber design system with CSS custom properties)
+- **Animations**: Framer Motion
+- **Architecture**: Modular, zero-server-dependency client prototype
+
+---
+
+## 📄 License
+
+MIT © 2026 SafeNet India Prototype
