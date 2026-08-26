@@ -67,7 +67,6 @@ export default function Home() {
         <nav>
           <a href="#support">What happened?</a>
           <a href="#how">How it works</a>
-          <a href="#architecture">Architecture</a>
           <a href="#about">Why SafeNet</a>
         </nav>
         <Link className="navCta" href="/report">
@@ -233,108 +232,6 @@ export default function Home() {
             Try the flagship financial-fraud journey <span>→</span>
           </Link>
         </motion.div>
-      </section>
-
-      <section className="architectureSection" id="architecture">
-        <motion.div
-          className="archHeader"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.5 }}
-        >
-          <p className="kicker">END-TO-END ARCHITECTURE & SCALE</p>
-          <h2>What happens after a report is filed?</h2>
-          <p>
-            SafeNet is not just a UI skin. It is an intelligent ingestion layer engineered to bridge plain-language citizen stories into national law enforcement workflows while automating critical early-response actions.
-          </p>
-        </motion.div>
-
-        <div className="archGrid">
-          <motion.div
-            className="archCard"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-30px" }}
-            transition={{ duration: 0.45, delay: 0.05 }}
-            whileHover={{ y: -4 }}
-          >
-            <div className="archTop">
-              <span className="archStepBadge">PILLAR 01</span>
-              <span className="archProtocol">NCRP REST API</span>
-            </div>
-            <h3>Legal Schema & Section Mapper</h3>
-            <p>
-              Citizens speak in stories; police dockets require formal legal sections. SafeNet automatically normalizes narrative text into standard NCRP JSON payloads tagged with Section 66C (Identity Theft), 66D (Cheating by Personation), or 67 (Obscenity).
-            </p>
-            <div className="archImpact">
-              <strong>Impact:</strong> Zero changes needed for legacy State Cyber Cell software.
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="archCard"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-30px" }}
-            transition={{ duration: 0.45, delay: 0.15 }}
-            whileHover={{ y: -4 }}
-          >
-            <div className="archTop">
-              <span className="archStepBadge">PILLAR 02</span>
-              <span className="archProtocol">CFCFRMS 1930 NODE</span>
-            </div>
-            <h3>Golden Hour Automated Bank Lien</h3>
-            <p>
-              In payment fraud, money moves across mule accounts in minutes. Verified Transaction UTRs / UPI IDs trigger an automated pre-alert webhook to the Citizen Financial Cyber Fraud Reporting System, placing an immediate 24h hold on beneficiary accounts.
-            </p>
-            <div className="archImpact">
-              <strong>Impact:</strong> Stops fund drainage before manual police verification delays.
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="archCard"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-30px" }}
-            transition={{ duration: 0.45, delay: 0.25 }}
-            whileHover={{ y: -4 }}
-          >
-            <div className="archTop">
-              <span className="archStepBadge">PILLAR 03</span>
-              <span className="archProtocol">SEC 65B EVIDENCE</span>
-            </div>
-            <h3>Cryptographic Chain of Custody</h3>
-            <p>
-              Uploaded screenshots, chat exports, and audio recordings are client-side SHA-256 hashed with an ISO-8601 timestamp certificate and EXIF metadata extractor, preventing courtroom dismissals due to tampering claims under the Bharatiya Sakshya Adhiniyam.
-            </p>
-            <div className="archImpact">
-              <strong>Impact:</strong> Ironclad digital evidence admissible directly in court.
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="archCard"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-30px" }}
-            transition={{ duration: 0.45, delay: 0.35 }}
-            whileHover={{ y: -4 }}
-          >
-            <div className="archTop">
-              <span className="archStepBadge">PILLAR 04</span>
-              <span className="archProtocol">DPDP ACT 2023</span>
-            </div>
-            <h3>Zero-Knowledge Ephemeral Intake</h3>
-            <p>
-              Sensitive citizen identifiers (Aadhaar, debit card numbers, OTPs) are masked and sanitized in memory before transit. No citizen draft is stored unencrypted, fully respecting India’s Digital Personal Data Protection Act requirements.
-            </p>
-            <div className="archImpact">
-              <strong>Impact:</strong> High citizen trust with state-grade privacy protections.
-            </div>
-          </motion.div>
-        </div>
       </section>
 
       <motion.section
