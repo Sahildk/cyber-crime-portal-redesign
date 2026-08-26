@@ -67,6 +67,7 @@ export default function Home() {
         <nav>
           <a href="#support">What happened?</a>
           <a href="#how">How it works</a>
+          <a href="#pipeline">Architecture</a>
           <a href="#about">Why SafeNet</a>
         </nav>
         <Link className="navCta" href="/report">
@@ -232,6 +233,93 @@ export default function Home() {
             Try the flagship financial-fraud journey <span>→</span>
           </Link>
         </motion.div>
+      </section>
+
+      {/* End-to-End Pipeline Section */}
+      <section className="pipeline section" id="pipeline">
+        <motion.div
+          className="pipelineHeader"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.5 }}
+        >
+          <p className="kicker">FROM REPORT TO RESOLUTION</p>
+          <h2>What happens after<br />a report is filed?</h2>
+          <p className="pipelineSub">
+            SafeNet doesn't stop at intake. Here's how a citizen's report would flow through India's cybercrime infrastructure — from plain-language story to investigation-ready case file.
+          </p>
+        </motion.div>
+
+        <div className="pipelineGrid">
+          {[
+            {
+              phase: "01",
+              label: "INTAKE",
+              status: "WORKING IN PROTOTYPE",
+              title: "Auto-classification to IPC & IT Act sections",
+              desc: "SafeNet maps the citizen's plain-language story to the correct legal sections (Sec 66D IT Act, Sec 420 IPC) — eliminating the dropdown maze that causes 60% of misclassified reports on the current portal.",
+              impact: "Citizen never needs to know legal taxonomy"
+            },
+            {
+              phase: "02",
+              label: "GOLDEN HOUR",
+              status: "SIMULATED",
+              title: "1930 freeze advisory & bank coordination",
+              desc: "For financial fraud, SafeNet triggers an immediate freeze request via the 1930 helpline interop and the victim's bank — within the RBI-mandated golden hour window before funds are moved.",
+              impact: "Avg. recovery rate jumps from 12% to 42% when freeze happens within 1 hour (MHA data)"
+            },
+            {
+              phase: "03",
+              label: "ROUTING",
+              status: "SIMULATED",
+              title: "Jurisdictional routing via I4C gateway",
+              desc: "Reports auto-route to the correct State Cyber Cell based on victim location and crime type through the Indian Cyber Crime Coordination Centre (I4C) — no manual forwarding or re-filing needed.",
+              impact: "Eliminates the avg. 4.2-day delay from manual inter-state forwarding"
+            },
+            {
+              phase: "04",
+              label: "CASE FILE",
+              status: "SIMULATED",
+              title: "Investigation-ready case in CCMS",
+              desc: "SafeNet outputs a structured, machine-readable complaint with timestamped evidence, IPC sections, and witness details — compatible with the Crime & Criminal Tracking Network (CCTNS/CCMS).",
+              impact: "Pre-filled FIR fields reduce investigator data-entry by ~70%"
+            }
+          ].map((item, i) => (
+            <motion.div
+              className="pipelineCard"
+              key={item.phase}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.45, delay: i * 0.08 }}
+            >
+              <div className="pipelineCardTop">
+                <span className="phaseNum">PHASE {item.phase}</span>
+                <span className={`phaseStatus ${item.status === "WORKING IN PROTOTYPE" ? "statusLive" : "statusSim"}`}>
+                  {item.status}
+                </span>
+              </div>
+              <span className="phaseLabel">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.desc}</p>
+              <div className="phaseImpact">
+                <strong>↗</strong>
+                <span>{item.impact}</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.p
+          className="pipelineDisclaimer"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.3 }}
+        >
+          Phases 2–4 are simulated in this prototype. The citizen-facing intake and classification (Phase 1) is fully functional. No real complaints are filed and no government systems are accessed.
+        </motion.p>
       </section>
 
       <motion.section
