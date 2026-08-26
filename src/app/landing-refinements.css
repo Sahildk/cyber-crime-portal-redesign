@@ -1,0 +1,121 @@
+.site .serviceGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.site .serviceCard.card1 {
+  grid-column: span 2;
+  min-height: 220px;
+  background: linear-gradient(120deg, #25451f, #0e1e13 62%);
+  border: 1px solid #3c6b44;
+}
+
+.site .serviceCard.card1:before {
+  width: 340px;
+  height: 340px;
+  right: -40px;
+  top: -175px;
+  background: #72f52a2c;
+}
+
+.site .serviceTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.site .cardTag {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 99px;
+  background: #183321;
+  color: #a6f691;
+  border: 1px solid #35583b;
+}
+
+.site .serviceCard.card1 .cardTag {
+  background: #72f52a;
+  color: #0b1a0d;
+  border: none;
+  box-shadow: 0 0 15px #72f52a44;
+}
+
+.site .serviceCard.card1 h3 {
+  font-size: 30px;
+}
+
+.site .serviceCard.card1 p {
+  max-width: 480px;
+  font-size: 14px;
+}
+
+.site .serviceCard.card1 .serviceIcon {
+  width: 48px;
+  height: 48px;
+  font-size: 23px;
+}
+
+.site .compareStep {
+  text-align: center;
+  color: var(--lime);
+  font-size: 18px;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.site .miniResult {
+  display: block !important;
+}
+
+.site .miniResult b,
+.site .miniResult span {
+  display: block;
+}
+
+.site .miniResult span {
+  margin-top: 5px;
+  color: #c1e8bd;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.site .miniConfirm {
+  font-size: 11px !important;
+  color: #adbfaf !important;
+  margin: 14px 0 7px !important;
+}
+
+.site .phoneBody > a {
+  display: block;
+  border-radius: 7px;
+  width: 100%;
+  padding: 10px;
+  background: var(--lime);
+  font-weight: bold;
+  color: #142111;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.site .phoneBody button {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .site .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+  .site .serviceCard.card1 {
+    grid-column: auto;
+    min-height: 245px;
+  }
+  .site .serviceCard.card1 h3 {
+    font-size: 26px;
+  }
+  .site .phoneMock {
+    height: 550px;
+  }
+}
